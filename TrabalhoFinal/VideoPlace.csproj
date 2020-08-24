@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA8AB183-A2C0-4644-80EF-313C3A2A9E6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TrabalhoFinal</RootNamespace>
+    <AssemblyName>TrabalhoFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="DeleteMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteMovie.Designer.cs">
+      <DependentUpon>DeleteMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.Designer.cs">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertMovie.Designer.cs">
+      <DependentUpon>InsertMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertNewBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertNewBorrowing.Designer.cs">
+      <DependentUpon>InsertNewBorrowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertUsers.Designer.cs">
+      <DependentUpon>InsertUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListMovies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListMovies.Designer.cs">
+      <DependentUpon>ListMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListUser.Designer.cs">
+      <DependentUpon>ListUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMovie.Designer.cs">
+      <DependentUpon>UpdateMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="DeleteMovie.resx">
+      <DependentUpon>DeleteMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUser.resx">
+      <DependentUpon>DeleteUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertMovie.resx">
+      <DependentUpon>InsertMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertNewBorrowing.resx">
+      <DependentUpon>InsertNewBorrowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertUsers.resx">
+      <DependentUpon>InsertUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListMovies.resx">
+      <DependentUpon>ListMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListUser.resx">
+      <DependentUpon>ListUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UpdateMovie.resx">
+      <DependentUpon>UpdateMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
