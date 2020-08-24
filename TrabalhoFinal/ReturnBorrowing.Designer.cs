@@ -334,7 +334,7 @@
             this.gp_borrowing.TabStop = false;
             this.gp_borrowing.Text = "Borrowing";
             // 
-            // ReturnBorring
+            // ReturnBorrowing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,7 +342,9 @@
             this.Controls.Add(this.gb_btn);
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gp_borrowing);
-            this.Name = "ReturnBorring";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ReturnBorrowing";
             this.Text = "ReturnBorring";
             this.gb_btn.ResumeLayout(false);
             this.gp_data.ResumeLayout(false);

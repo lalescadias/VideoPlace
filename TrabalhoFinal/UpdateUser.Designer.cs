@@ -201,6 +201,8 @@
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gp_search);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdateUser";
             this.Text = "Update User";
             this.gp_data.ResumeLayout(false);

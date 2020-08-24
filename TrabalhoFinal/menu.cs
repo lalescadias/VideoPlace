@@ -32,10 +32,20 @@ namespace TrabalhoFinal
 
         private void menu_Load(object sender, EventArgs e)
         {
-            /*frmDeleteUser.MdiParent = this;
+            frmDeleteUser.MdiParent = this;
             frmInsertUser.MdiParent = this;
             frmListUser.MdiParent = this;
-            frmUpdateUser.MdiParent = this;*/
+            frmUpdateUser.MdiParent = this;
+            frmInsertMovie.MdiParent = this;
+            frmDeleteMovie.MdiParent = this;
+            frmUpdateMovie.MdiParent = this;
+            frmListMovie.MdiParent = this;
+            frminsertNewBorrowing.MdiParent = this;
+            frmUpdateBorrowing.MdiParent = this;
+            frmListBorrowing.MdiParent = this;
+            frmDeleteBorrowing.MdiParent = this;
+            frmReturnBorrowing.MdiParent = this;
+
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,11 +98,6 @@ namespace TrabalhoFinal
             frmListUser.Location = new Point((this.ClientSize.Width - frmListUser.Width) / 2, (this.ClientSize.Height - 50 - frmListUser.Height) / 2);
             frmListUser.Show();
             frmListUser.Activate();
-        }
-
-        private void formandosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void insertMovieToolStripMenuItem_Click(object sender, EventArgs e)
@@ -212,6 +217,14 @@ namespace TrabalhoFinal
             frmReturnBorrowing.Location = new Point((this.ClientSize.Width - frmReturnBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frmReturnBorrowing.Height) / 2);
             frmReturnBorrowing.Show();
             frmReturnBorrowing.Activate();
+        }
+
+        private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Want to exit the application)", Util.title, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

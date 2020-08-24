@@ -104,6 +104,8 @@
             this.ClientSize = new System.Drawing.Size(534, 510);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.data_grid_borrowing);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ListBorrowing";
             this.Text = "List Borrowing";
             this.Load += new System.EventHandler(this.ListBorrowing_Load);

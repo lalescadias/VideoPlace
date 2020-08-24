@@ -104,6 +104,8 @@
             this.ClientSize = new System.Drawing.Size(532, 513);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.data_grid_user);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ListMovies";
             this.Text = "List Movies";
             this.Load += new System.EventHandler(this.ListMovies_Load);

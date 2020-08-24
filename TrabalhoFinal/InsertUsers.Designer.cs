@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gp_data = new System.Windows.Forms.GroupBox();
+            this.txt_adress = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txt_contact = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.gb_btn = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_adress = new System.Windows.Forms.TextBox();
             this.gp_data.SuspendLayout();
             this.gb_btn.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,22 @@
             this.gp_data.TabIndex = 2;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
+            // 
+            // txt_adress
+            // 
+            this.txt_adress.Location = new System.Drawing.Point(81, 109);
+            this.txt_adress.Name = "txt_adress";
+            this.txt_adress.Size = new System.Drawing.Size(338, 20);
+            this.txt_adress.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Adress:";
             // 
             // txt_contact
             // 
@@ -119,22 +135,6 @@
             this.gb_btn.TabIndex = 3;
             this.gb_btn.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Adress:";
-            // 
-            // txt_adress
-            // 
-            this.txt_adress.Location = new System.Drawing.Point(81, 109);
-            this.txt_adress.Name = "txt_adress";
-            this.txt_adress.Size = new System.Drawing.Size(338, 20);
-            this.txt_adress.TabIndex = 5;
-            // 
             // insertUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +142,8 @@
             this.ClientSize = new System.Drawing.Size(511, 353);
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gb_btn);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "insertUser";
             this.Text = "Insert User";
             this.gp_data.ResumeLayout(false);

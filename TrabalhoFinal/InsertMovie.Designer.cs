@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gp_data = new System.Windows.Forms.GroupBox();
+            this.cb_genre = new System.Windows.Forms.ComboBox();
             this.txt_desc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_releaseYear = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.gb_btn = new System.Windows.Forms.GroupBox();
-            this.cb_genre = new System.Windows.Forms.ComboBox();
             this.gp_data.SuspendLayout();
             this.gb_btn.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,41 @@
             this.gp_data.TabIndex = 4;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
+            // 
+            // cb_genre
+            // 
+            this.cb_genre.FormattingEnabled = true;
+            this.cb_genre.Items.AddRange(new object[] {
+            "Absurdist/surreal/whimsical",
+            "Action",
+            "Adventure",
+            "Animation",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Fantasy",
+            "Historical",
+            "Historical fiction",
+            "Horror",
+            "Magical realism",
+            "Mystery",
+            "Paranoid fiction",
+            "Philosophical",
+            "Political",
+            "Romance",
+            "Saga",
+            "Satire",
+            "Science fiction",
+            "Social",
+            "Speculative",
+            "Thriller",
+            "Urban",
+            "Western",
+            "Others"});
+            this.cb_genre.Location = new System.Drawing.Point(103, 74);
+            this.cb_genre.Name = "cb_genre";
+            this.cb_genre.Size = new System.Drawing.Size(121, 21);
+            this.cb_genre.TabIndex = 10;
             // 
             // txt_desc
             // 
@@ -172,41 +207,6 @@
             this.gb_btn.TabIndex = 5;
             this.gb_btn.TabStop = false;
             // 
-            // cb_genre
-            // 
-            this.cb_genre.FormattingEnabled = true;
-            this.cb_genre.Items.AddRange(new object[] {
-            "Absurdist/surreal/whimsical",
-            "Action",
-            "Adventure",
-            "Animation",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Fantasy",
-            "Historical",
-            "Historical fiction",
-            "Horror",
-            "Magical realism",
-            "Mystery",
-            "Paranoid fiction",
-            "Philosophical",
-            "Political",
-            "Romance",
-            "Saga",
-            "Satire",
-            "Science fiction",
-            "Social",
-            "Speculative",
-            "Thriller",
-            "Urban",
-            "Western",
-            "Others"});
-            this.cb_genre.Location = new System.Drawing.Point(103, 74);
-            this.cb_genre.Name = "cb_genre";
-            this.cb_genre.Size = new System.Drawing.Size(121, 21);
-            this.cb_genre.TabIndex = 10;
-            // 
             // InsertMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +214,8 @@
             this.ClientSize = new System.Drawing.Size(499, 450);
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gb_btn);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InsertMovie";
             this.Text = "Insert Movie";
             this.Load += new System.EventHandler(this.InsertMovie_Load);

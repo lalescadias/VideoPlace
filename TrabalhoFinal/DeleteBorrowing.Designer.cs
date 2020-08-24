@@ -342,6 +342,8 @@
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gp_borrowing);
             this.Controls.Add(this.gb_btn);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DeleteBorrowing";
             this.Text = "DeleteBorrowing";
             this.gp_dataMovie.ResumeLayout(false);

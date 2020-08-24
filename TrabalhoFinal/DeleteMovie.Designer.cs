@@ -38,6 +38,7 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gp_data = new System.Windows.Forms.GroupBox();
+            this.txt_genre = new System.Windows.Forms.TextBox();
             this.txt_desc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_releaseYear = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.txt_title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_genre = new System.Windows.Forms.TextBox();
             this.gp_search.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gp_data.SuspendLayout();
@@ -153,6 +153,13 @@
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
+            // txt_genre
+            // 
+            this.txt_genre.Location = new System.Drawing.Point(102, 77);
+            this.txt_genre.Name = "txt_genre";
+            this.txt_genre.Size = new System.Drawing.Size(121, 20);
+            this.txt_genre.TabIndex = 11;
+            // 
             // txt_desc
             // 
             this.txt_desc.Location = new System.Drawing.Point(102, 190);
@@ -228,13 +235,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Title:";
             // 
-            // txt_genre
-            // 
-            this.txt_genre.Location = new System.Drawing.Point(102, 77);
-            this.txt_genre.Name = "txt_genre";
-            this.txt_genre.Size = new System.Drawing.Size(121, 20);
-            this.txt_genre.TabIndex = 11;
-            // 
             // DeleteMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +243,8 @@
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gp_search);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DeleteMovie";
             this.Text = "Delete Movie";
             this.Load += new System.EventHandler(this.DeleteMovie_Load);

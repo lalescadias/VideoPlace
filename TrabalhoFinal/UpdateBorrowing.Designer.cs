@@ -341,6 +341,8 @@
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gb_btn);
             this.Controls.Add(this.gp_borrowing);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "UpdateBorrowing";
             this.Text = "UpdateBorrowing";
             this.gb_btn.ResumeLayout(false);
