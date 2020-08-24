@@ -43,6 +43,11 @@
             this.listToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.borrowingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.listToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,10 +157,15 @@
             // borrowingToolStripMenuItem
             // 
             this.borrowingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.insertToolStripMenuItem1});
+            this.insertToolStripMenuItem1,
+            this.updateToolStripMenuItem2,
+            this.deleteToolStripMenuItem2,
+            this.toolStripSeparator2,
+            this.listToolStripMenuItem2,
+            this.returnToolStripMenuItem});
             this.borrowingToolStripMenuItem.Name = "borrowingToolStripMenuItem";
             this.borrowingToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.borrowingToolStripMenuItem.Text = "Borrowing";
+            this.borrowingToolStripMenuItem.Text = "&Borrowing";
             // 
             // insertToolStripMenuItem1
             // 
@@ -163,6 +173,39 @@
             this.insertToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.insertToolStripMenuItem1.Text = "&Insert";
             this.insertToolStripMenuItem1.Click += new System.EventHandler(this.insertToolStripMenuItem1_Click);
+            // 
+            // updateToolStripMenuItem2
+            // 
+            this.updateToolStripMenuItem2.Name = "updateToolStripMenuItem2";
+            this.updateToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.updateToolStripMenuItem2.Text = "&Update";
+            this.updateToolStripMenuItem2.Click += new System.EventHandler(this.updateToolStripMenuItem2_Click);
+            // 
+            // deleteToolStripMenuItem2
+            // 
+            this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem2.Text = "&Delete";
+            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // listToolStripMenuItem2
+            // 
+            this.listToolStripMenuItem2.Name = "listToolStripMenuItem2";
+            this.listToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listToolStripMenuItem2.Text = "&List";
+            this.listToolStripMenuItem2.Click += new System.EventHandler(this.listToolStripMenuItem2_Click);
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.returnToolStripMenuItem.Text = "&Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // menu
             // 
@@ -172,7 +215,7 @@
             this.ClientSize = new System.Drawing.Size(1106, 614);
             this.Controls.Add(this.menuStrip1);
             this.Name = "menu";
-            this.Text = "menu";
+            this.Text = "Video Place";
             this.Load += new System.EventHandler(this.menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -198,5 +241,10 @@
         private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem borrowingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insertToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
     }
 }

@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="DeleteBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBorrowing.Designer.cs">
+      <DependentUpon>DeleteBorrowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     <Compile Include="InsertUsers.Designer.cs">
       <DependentUpon>InsertUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBorrowing.Designer.cs">
+      <DependentUpon>ListBorrowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListMovies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +113,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBorrowing.Designer.cs">
+      <DependentUpon>ReturnBorrowing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBorrowing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBorrowing.Designer.cs">
+      <DependentUpon>UpdateBorrowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +138,9 @@
       <DependentUpon>UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
+    <EmbeddedResource Include="DeleteBorrowing.resx">
+      <DependentUpon>DeleteBorrowing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteMovie.resx">
       <DependentUpon>DeleteMovie.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsertUsers.resx">
       <DependentUpon>InsertUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBorrowing.resx">
+      <DependentUpon>ListBorrowing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListMovies.resx">
       <DependentUpon>ListMovies.cs</DependentUpon>
@@ -147,6 +177,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReturnBorrowing.resx">
+      <DependentUpon>ReturnBorrowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBorrowing.resx">
+      <DependentUpon>UpdateBorrowing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateMovie.resx">
       <DependentUpon>UpdateMovie.cs</DependentUpon>
     </EmbeddedResource>

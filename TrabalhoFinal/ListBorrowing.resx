@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_searchMovie.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAX5JREFUOE+V
-        kstOwkAUhlnpK3iLiQsXJr6aEhegtrXpTqH0Qo2LBmyptJiwcAmJCE9gNSagBhNXguJthdFCYJyDk7SG
-        Ueuf/OnkzHxnzpzTyE9a0bRJRjbWeO3gipEMDzxap8wo7JFjdLGyNbulWjdqodytNNrI7fRHrtTbSHHK
-        XS5tNeEMOf5dkB3gw9p5/+IFIZoL1bM+p1pNaiVQNtxMA4OGSljJWCWYL17LX0PZNCjo43oL8en8JcF8
-        4SZ5bqdHhYI+feihTcn4IJgvCIZJ4OIEeDLvBPM1egLuNg0K+rcnRFWn9EaDglbsEr2JseTeFB6R55y4
-        VBDskDEKQnGCYF9iFH2alXO3G2IWsarVg1FBqdATMKzhZoDHfqT1HX2ek4wWq+SGrGTeCZo9ByXCO6Gx
-        YNyfBsTGbubEzAKG7oVde4C/7Xhif4Zs/a14IrPEyObztl4c4PKfIBnZCif86z6mzKMhnulrLGkuknB4
-        cbJZhSSMmF0moX8oEvkETIPVSmizfqgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_searchUser.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAX5JREFUOE+V
-        kstOwkAUhlnpK3iLiQsXJr6aEhegtrXpTqH0Qo2LBmyptJiwcAmJCE9gNSagBhNXguJthdFCYJyDk7SG
-        Ueuf/OnkzHxnzpzTyE9a0bRJRjbWeO3gipEMDzxap8wo7JFjdLGyNbulWjdqodytNNrI7fRHrtTbSHHK
-        XS5tNeEMOf5dkB3gw9p5/+IFIZoL1bM+p1pNaiVQNtxMA4OGSljJWCWYL17LX0PZNCjo43oL8en8JcF8
-        4SZ5bqdHhYI+feihTcn4IJgvCIZJ4OIEeDLvBPM1egLuNg0K+rcnRFWn9EaDglbsEr2JseTeFB6R55y4
-        VBDskDEKQnGCYF9iFH2alXO3G2IWsarVg1FBqdATMKzhZoDHfqT1HX2ek4wWq+SGrGTeCZo9ByXCO6Gx
-        YNyfBsTGbubEzAKG7oVde4C/7Xhif4Zs/a14IrPEyObztl4c4PKfIBnZCif86z6mzKMhnulrLGkuknB4
-        cbJZhSSMmF0moX8oEvkETIPVSmizfqgAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

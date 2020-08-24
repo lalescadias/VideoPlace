@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using MySql.Data.MySqlClient;
 
 namespace TrabalhoFinal
 {
@@ -174,22 +175,38 @@ namespace TrabalhoFinal
             {
                 MessageBox.Show("Unable to insert, check the fields!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                string initialDate = initial_date.Value.Year + "-"+ initial_date.Value.Month + "-" + initial_date.Value.Day;
+            else { 
+                string initialDate = initial_date.Value.Year + "-" + initial_date.Value.Month + "-" + initial_date.Value.Day;
                 string finalDate = final_date.Value.Year + "-" + final_date.Value.Month + "-" + final_date.Value.Day;
-                if (connectDataBase.insertBorrowing(txt_searchMovie.Text, txt_seachUser.Text, initialDate, finalDate) && connectDataBase.updateMovie(txt_searchMovie.Text))
+                MySqlTransaction tran = null;
+                try
                 {
-                    MessageBox.Show("Successfully inserted!!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btn_clearUser_Click(sender,e);
-                    btn_clearMovie_Click(sender, e);
-                    final_date.Value = initial_date.Value;
+                    if (connectDataBase.OpenConnection())
+                    {
+                        tran = connectDataBase.BeginTransaction();
+                        connectDataBase.insertBorrowingWithoutConnection(txt_searchMovie.Text, txt_seachUser.Text, initialDate, finalDate);
+                        connectDataBase.updateMovieWithoutConnection(txt_searchMovie.Text, "-");
+                        tran.Commit();
+                        MessageBox.Show("Successfully inserted!!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btn_clearUser_Click(sender, e);
+                        btn_clearMovie_Click(sender, e);
+                        final_date.Value = initial_date.Value;                   
+                    }
                 }
-                else
+                catch(MySqlException ex)
                 {
-                    MessageBox.Show("Insertion error!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (tran != null)
+                    {
+                        tran.Rollback();
+                        MessageBox.Show("Insert error!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                
+                finally
+                {
+                    connectDataBase.CloseConnection();
+                }
+
             }
         }
     }

@@ -32,9 +32,8 @@ class DBConnect
             dataBase + ";" + "UID=" + uid + ";" + "PASSWORD=" +
             password + ";" + "PORT=" + port + ";";
         connection = new MySqlConnection(connectionString);
-
     }
-    private bool OpenConnection()
+    public bool OpenConnection()
     {
         try
         {
@@ -47,7 +46,7 @@ class DBConnect
             return false;
         }
     }
-    private bool CloseConnection()
+    public bool CloseConnection()
     {
         try
         {
@@ -425,9 +424,9 @@ class DBConnect
         }
         return flag;
     }
-    public bool updateMovie(string id)
+    public bool updateMovie(string id, string operador)
     {
-        string query = "Update movies set amount = amount - 1 where movie_id= " + id;
+        string query = "Update movies set amount = amount "+operador+" 1 where movie_id= " + id;
         bool flag = false;
         try
         {
@@ -447,5 +446,187 @@ class DBConnect
             this.CloseConnection();
         }
         return flag;
+    }
+    public bool SearchBorrowing(string id, ref string name, ref string contact, ref string title, ref string genre, ref string release, ref string initial_date, ref string final_date)
+    {
+        string query = "select users.name, users.contact, movies.title, movies.genre, movies.release_year, borrowing.initial_date, borrowing.final_date from borrowing" +
+            " inner join movies on movies.movie_id = borrowing.movie_id " +
+            "inner join users on users.userId = borrowing.userId where borrowing_id = " + id;
+        bool flag = false;
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    name = dataReader["name"].ToString();
+                    contact = dataReader["contact"].ToString();
+                    title = dataReader["title"].ToString();
+                    genre = dataReader["genre"].ToString();
+                    release = dataReader["release_year"].ToString();
+                    initial_date = dataReader["initial_date"].ToString();
+                    final_date = dataReader["final_date"].ToString();
+                    flag = true;
+                }
+                dataReader.Close();
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return flag;
+    }
+    public bool updateBorrowing(string id, string finalDate)
+    {
+        string query = "Update borrowing set final_date ='" + finalDate + "'where borrowing_id = " + id;
+        bool flag = false;
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                flag = true;
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return flag;
+    }
+    public List<string>[] BorrowingList()
+    {
+        string query = "select users.name, users.contact, movies.title, movies.genre, borrowing.borrowing_id, borrowing.initial_date, borrowing.final_date from borrowing" +
+            " inner join movies on movies.movie_id = borrowing.movie_id " +
+            "inner join users on users.userId = borrowing.userId;";
+
+        List<string>[] list = new List<string>[7];
+        list[0] = new List<string>();
+        list[1] = new List<string>();
+        list[2] = new List<string>();
+        list[3] = new List<string>();
+        list[4] = new List<string>();
+        list[5] = new List<string>();
+        list[6] = new List<string>();
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    list[0].Add(dataReader["borrowing_id"].ToString());
+                    list[1].Add(dataReader["name"].ToString());
+                    list[2].Add(dataReader["contact"].ToString());
+                    list[3].Add(dataReader["title"].ToString());
+                    list[4].Add(dataReader["genre"].ToString());
+                    list[5].Add(dataReader["initial_date"].ToString().Substring(0,10));
+                    list[6].Add(dataReader["final_date"].ToString().Substring(0, 10));
+                }
+                dataReader.Close();
+                this.CloseConnection();
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return list;
+    }
+    public bool DeleteBorrowing(string id)
+    {
+        string query = "Delete from borrowing where borrowing_id= " + id;
+        bool flag = false;
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                flag = true;
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return flag;
+    }
+    public bool SearchBorrowing(string id, ref string movie_id)
+    {
+        string query = "select movies.movie_id from borrowing" +
+            " inner join movies on movies.movie_id = borrowing.movie_id  where borrowing_id = " + id;
+        bool flag = false;
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    movie_id = dataReader["movie_id"].ToString();
+                    flag = true;
+                }
+                dataReader.Close();
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return flag;
+    }
+    public MySqlTransaction BeginTransaction()
+    {
+        return connection.BeginTransaction();
+    }
+    public void DeleteBorrowingWithoutConnection(string id) 
+    {
+        string query = "Delete from borrowing where borrowing_id= " + id;
+        MySqlCommand cmd = new MySqlCommand(query, connection);
+        cmd.ExecuteNonQuery();
+    }
+    public void updateMovieWithoutConnection(string id, string operador)
+    {
+        string query = "Update movies set amount = amount " + operador + " 1 where movie_id= " + id;
+        MySqlCommand cmd = new MySqlCommand(query, connection);
+        cmd.ExecuteNonQuery(); 
+    }
+    public void insertBorrowingWithoutConnection(string movie_id, string userId, string Initialdate, string finalDate)
+    {
+        string query = "insert into borrowing (movie_id, userId, initial_date, final_date) values(" +
+           "'" + movie_id + "', '" + userId + "', '" + Initialdate + "', '" + finalDate + "'); ";           
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                
+        
     }
 }

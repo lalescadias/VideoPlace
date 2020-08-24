@@ -19,3 +19,7 @@ C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.UpdateMovie.resources
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.ListMovies.resources
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.InsertNewBorrowing.resources
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.UpdateBorrowing.resources
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.ListBorrowing.resources
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.DeleteBorrowing.resources
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.ReturnBorrowing.resources

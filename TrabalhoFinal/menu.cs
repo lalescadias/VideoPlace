@@ -21,6 +21,10 @@ namespace TrabalhoFinal
         UpdateMovie frmUpdateMovie = new UpdateMovie();
         ListMovies frmListMovie = new ListMovies();
         InsertNewBorrowing frminsertNewBorrowing = new InsertNewBorrowing();
+        UpdateBorrowing frmUpdateBorrowing = new UpdateBorrowing();
+        ListBorrowing frmListBorrowing = new ListBorrowing();
+        DeleteBorrowing frmDeleteBorrowing = new DeleteBorrowing();
+        ReturnBorrowing frmReturnBorrowing = new ReturnBorrowing();
         public menu()
         {
             InitializeComponent();
@@ -155,6 +159,59 @@ namespace TrabalhoFinal
             frminsertNewBorrowing.Location = new Point((this.ClientSize.Width - frminsertNewBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frminsertNewBorrowing.Height));
             frminsertNewBorrowing.Show();
             frminsertNewBorrowing.Activate();
+        }
+
+        private void updateToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (frmUpdateBorrowing.IsDisposed)
+            {
+                frmUpdateBorrowing = new UpdateBorrowing();
+                frmUpdateBorrowing.MdiParent = this;
+            }
+            frmUpdateBorrowing.StartPosition = FormStartPosition.Manual;
+            frmUpdateBorrowing.Location = new Point((this.ClientSize.Width - frmUpdateBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frmUpdateBorrowing.Height));
+            frmUpdateBorrowing.Show();
+            frmUpdateBorrowing.Activate();
+        }
+
+        private void listToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (frmListBorrowing.IsDisposed)
+            {
+                frmListBorrowing = new ListBorrowing();
+                frmListBorrowing.MdiParent = this;
+            }
+            frmListBorrowing.StartPosition = FormStartPosition.Manual;
+            frmListBorrowing.Location = new Point((this.ClientSize.Width - frmListBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frmListBorrowing.Height) / 2);
+            frmListBorrowing.Show();
+            frmListBorrowing.Activate();
+        }
+
+        private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (frmDeleteBorrowing.IsDisposed)
+            {
+                frmDeleteBorrowing = new DeleteBorrowing();
+                frmDeleteBorrowing.MdiParent = this;
+            }
+            frmDeleteBorrowing.StartPosition = FormStartPosition.Manual;
+            frmDeleteBorrowing.Location = new Point((this.ClientSize.Width - frmDeleteBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frmDeleteBorrowing.Height) / 2);
+            frmDeleteBorrowing.Show();
+            frmDeleteBorrowing.Activate();
+
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmReturnBorrowing.IsDisposed)
+            {
+                frmReturnBorrowing = new ReturnBorrowing();
+                frmReturnBorrowing.MdiParent = this;
+            }
+            frmReturnBorrowing.StartPosition = FormStartPosition.Manual;
+            frmReturnBorrowing.Location = new Point((this.ClientSize.Width - frmReturnBorrowing.Width) / 2, (this.ClientSize.Height - 50 - frmReturnBorrowing.Height) / 2);
+            frmReturnBorrowing.Show();
+            frmReturnBorrowing.Activate();
         }
     }
 }
