@@ -61,13 +61,14 @@
             this.gp_data.Controls.Add(this.label1);
             this.gp_data.Location = new System.Drawing.Point(12, 12);
             this.gp_data.Name = "gp_data";
-            this.gp_data.Size = new System.Drawing.Size(476, 278);
-            this.gp_data.TabIndex = 4;
+            this.gp_data.Size = new System.Drawing.Size(476, 297);
+            this.gp_data.TabIndex = 0;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
             // cb_genre
             // 
+            this.cb_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_genre.FormattingEnabled = true;
             this.cb_genre.Items.AddRange(new object[] {
             "Absurdist/surreal/whimsical",
@@ -99,7 +100,7 @@
             this.cb_genre.Location = new System.Drawing.Point(103, 74);
             this.cb_genre.Name = "cb_genre";
             this.cb_genre.Size = new System.Drawing.Size(121, 21);
-            this.cb_genre.TabIndex = 10;
+            this.cb_genre.TabIndex = 3;
             // 
             // txt_desc
             // 
@@ -205,7 +206,7 @@
             this.gb_btn.Location = new System.Drawing.Point(11, 315);
             this.gb_btn.Name = "gb_btn";
             this.gb_btn.Size = new System.Drawing.Size(476, 123);
-            this.gb_btn.TabIndex = 5;
+            this.gb_btn.TabIndex = 1;
             this.gb_btn.TabStop = false;
             // 
             // InsertMovie

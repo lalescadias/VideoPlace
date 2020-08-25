@@ -93,6 +93,7 @@
             // 
             // data_grid_borrowing
             // 
+            this.data_grid_borrowing.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.data_grid_borrowing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_grid_borrowing.Location = new System.Drawing.Point(12, 12);
             this.data_grid_borrowing.Name = "data_grid_borrowing";

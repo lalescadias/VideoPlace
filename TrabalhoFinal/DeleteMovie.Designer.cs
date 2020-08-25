@@ -61,7 +61,7 @@
             this.gp_search.Location = new System.Drawing.Point(12, 12);
             this.gp_search.Name = "gp_search";
             this.gp_search.Size = new System.Drawing.Size(488, 100);
-            this.gp_search.TabIndex = 10;
+            this.gp_search.TabIndex = 0;
             this.gp_search.TabStop = false;
             this.gp_search.Text = "Search";
             // 
@@ -131,7 +131,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 403);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(488, 123);
-            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // gp_data
@@ -149,7 +149,7 @@
             this.gp_data.Location = new System.Drawing.Point(12, 119);
             this.gp_data.Name = "gp_data";
             this.gp_data.Size = new System.Drawing.Size(488, 278);
-            this.gp_data.TabIndex = 11;
+            this.gp_data.TabIndex = 1;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
@@ -158,7 +158,7 @@
             this.txt_genre.Location = new System.Drawing.Point(102, 77);
             this.txt_genre.Name = "txt_genre";
             this.txt_genre.Size = new System.Drawing.Size(121, 20);
-            this.txt_genre.TabIndex = 11;
+            this.txt_genre.TabIndex = 3;
             // 
             // txt_desc
             // 

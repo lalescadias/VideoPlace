@@ -59,7 +59,9 @@ namespace TrabalhoFinal
                     txt_desc.Text = desc;
                     btn_delete.Enabled = true;
                     btn_new_search.Visible = true;
-                    
+                    txt_search.Enabled = false;
+                    btn_search.Enabled = false;
+
                 }
                 else
                 {
@@ -77,6 +79,9 @@ namespace TrabalhoFinal
         {
             btn_cancel.Enabled = true;
             btn_new_search.Visible = false;
+            btn_delete.Enabled = false;
+            txt_search.Enabled = true;
+            btn_search.Enabled = true;
             txt_search.Text = "";
             txt_search.Focus();
             txt_title.Clear();
@@ -88,7 +93,11 @@ namespace TrabalhoFinal
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (connectDataBase.DeleteMovie(txt_search.Text))
+            if (connectDataBase.SearchBorrowing(txt_search.Text, "movie") > 0)
+            {
+                MessageBox.Show("It is not possible to delete film as there are rented films.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (connectDataBase.DeleteMovie(txt_search.Text))
             {
                 MessageBox.Show("Deleted record.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 btn_new_search_Click(sender, e);
@@ -104,6 +113,7 @@ namespace TrabalhoFinal
             BlockControls();
             txt_search.Focus();
             btn_new_search.Visible = false;
+            btn_delete.Enabled = false;
         }
 
       

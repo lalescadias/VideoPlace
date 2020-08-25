@@ -24,8 +24,10 @@ namespace TrabalhoFinal
         private void btn_search_Click(object sender, EventArgs e)
         {
             string name = "";
+            string nif = "";
             string contact = "";
             string adress = "";
+            
             txt_search.Text = Util.removeSpaces(txt_search.Text);
             if (txt_search.Text.Length < 1)
             {
@@ -34,11 +36,12 @@ namespace TrabalhoFinal
             }
             else
             {
-                if (connectDataBase.SearchUser(txt_search.Text, ref name, ref contact, ref adress))
+                if (connectDataBase.SearchUser(txt_search.Text, ref name, ref nif,ref contact, ref adress))
                 {
                     txt_name.Text = name;
                     txt_contact.Text = contact;
                     txt_adress.Text = adress;
+                    txt_nif.Text = nif;
                     gp_search.Enabled = false;
                     gp_data.Enabled = true;
                     btn_update.Enabled = true;
@@ -64,7 +67,7 @@ namespace TrabalhoFinal
             btn_new_search.Visible = false;
             txt_search.Text = "";
             txt_search.Focus();
-            Util.cleanfields(ref txt_name, ref txt_contact, ref txt_adress);
+            Util.cleanfields(ref txt_name,ref txt_nif, ref txt_contact, ref txt_adress);
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -95,7 +98,6 @@ namespace TrabalhoFinal
                 if (connectDataBase.UpdateUser(txt_search.Text,txt_name.Text, txt_contact.Text, txt_adress.Text))
                 {
                     MessageBox.Show("Successfully update!! Name: \n" + txt_name.Text, Util.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Util.cleanfields(ref txt_name, ref txt_contact, ref txt_adress);
                     btn_new_search_Click(sender, e);
                 }
                 else

@@ -41,6 +41,8 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.gp_search = new System.Windows.Forms.GroupBox();
             this.gp_data = new System.Windows.Forms.GroupBox();
+            this.txt_nif = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txt_adress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -72,10 +74,10 @@
             // 
             // txt_contact
             // 
-            this.txt_contact.Location = new System.Drawing.Point(81, 77);
+            this.txt_contact.Location = new System.Drawing.Point(81, 97);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(234, 20);
-            this.txt_contact.TabIndex = 3;
+            this.txt_contact.TabIndex = 5;
             // 
             // btn_new_search
             // 
@@ -109,7 +111,7 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(81, 41);
+            this.txt_name.Location = new System.Drawing.Point(81, 28);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(234, 20);
             this.txt_name.TabIndex = 1;
@@ -117,16 +119,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 77);
+            this.label2.Location = new System.Drawing.Point(25, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Contact:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 41);
+            this.label1.Location = new System.Drawing.Point(25, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -147,12 +149,14 @@
             this.gp_search.Location = new System.Drawing.Point(12, 12);
             this.gp_search.Name = "gp_search";
             this.gp_search.Size = new System.Drawing.Size(488, 100);
-            this.gp_search.TabIndex = 7;
+            this.gp_search.TabIndex = 0;
             this.gp_search.TabStop = false;
             this.gp_search.Text = "Search";
             // 
             // gp_data
             // 
+            this.gp_data.Controls.Add(this.txt_nif);
+            this.gp_data.Controls.Add(this.label5);
             this.gp_data.Controls.Add(this.txt_adress);
             this.gp_data.Controls.Add(this.label3);
             this.gp_data.Controls.Add(this.txt_contact);
@@ -162,24 +166,41 @@
             this.gp_data.Location = new System.Drawing.Point(12, 114);
             this.gp_data.Name = "gp_data";
             this.gp_data.Size = new System.Drawing.Size(488, 181);
-            this.gp_data.TabIndex = 5;
+            this.gp_data.TabIndex = 1;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
+            // txt_nif
+            // 
+            this.txt_nif.Location = new System.Drawing.Point(81, 63);
+            this.txt_nif.Name = "txt_nif";
+            this.txt_nif.ReadOnly = true;
+            this.txt_nif.Size = new System.Drawing.Size(123, 20);
+            this.txt_nif.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nif:";
+            // 
             // txt_adress
             // 
-            this.txt_adress.Location = new System.Drawing.Point(81, 115);
+            this.txt_adress.Location = new System.Drawing.Point(81, 141);
             this.txt_adress.Name = "txt_adress";
             this.txt_adress.Size = new System.Drawing.Size(330, 20);
-            this.txt_adress.TabIndex = 5;
+            this.txt_adress.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 118);
+            this.label3.Location = new System.Drawing.Point(25, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Adress:";
             // 
             // groupBox2
@@ -190,7 +211,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 311);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(488, 123);
-            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // deleteUser
@@ -233,5 +254,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_adress;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_nif;
+        private System.Windows.Forms.Label label5;
     }
 }

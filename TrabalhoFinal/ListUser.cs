@@ -31,11 +31,12 @@ namespace TrabalhoFinal
             data_grid_user.AllowUserToAddRows = false;
             data_grid_user.AllowUserToDeleteRows = false;
             data_grid_user.EditMode = DataGridViewEditMode.EditProgrammatically;
-            data_grid_user.ColumnCount = 4;
+            data_grid_user.ColumnCount = 5;
             data_grid_user.Columns[0].HeaderCell.Value = "Id";
-            data_grid_user.Columns[1].HeaderCell.Value = "name";
-            data_grid_user.Columns[2].HeaderCell.Value = "Contact";
-            data_grid_user.Columns[3].HeaderCell.Value = "Adress";
+            data_grid_user.Columns[1].HeaderCell.Value = "Name";
+            data_grid_user.Columns[2].HeaderCell.Value = "Nif";
+            data_grid_user.Columns[3].HeaderCell.Value = "Contact";
+            data_grid_user.Columns[4].HeaderCell.Value = "Adress";
 
             List<string>[] list;
             list = connectDataBase.UserList();
@@ -47,7 +48,8 @@ namespace TrabalhoFinal
                 data_grid_user.Rows[number].Cells[0].Value = list[0][i];
                 data_grid_user.Rows[number].Cells[1].Value = list[1][i];
                 data_grid_user.Rows[number].Cells[2].Value = list[2][i];
-                data_grid_user.Rows[number].Cells[3].Value = list[3][i];             
+                data_grid_user.Rows[number].Cells[3].Value = list[3][i];
+                data_grid_user.Rows[number].Cells[4].Value = list[4][i];             
             }
             label1.Text = list[0].Count.ToString();
         }

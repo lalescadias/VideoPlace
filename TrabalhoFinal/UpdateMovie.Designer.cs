@@ -68,12 +68,13 @@
             this.gp_data.Location = new System.Drawing.Point(12, 119);
             this.gp_data.Name = "gp_data";
             this.gp_data.Size = new System.Drawing.Size(488, 278);
-            this.gp_data.TabIndex = 14;
+            this.gp_data.TabIndex = 1;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
             // cb_genre
             // 
+            this.cb_genre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_genre.FormattingEnabled = true;
             this.cb_genre.Items.AddRange(new object[] {
             "Absurdist/surreal/whimsical",
@@ -105,7 +106,7 @@
             this.cb_genre.Location = new System.Drawing.Point(102, 77);
             this.cb_genre.Name = "cb_genre";
             this.cb_genre.Size = new System.Drawing.Size(121, 21);
-            this.cb_genre.TabIndex = 12;
+            this.cb_genre.TabIndex = 3;
             // 
             // txt_desc
             // 
@@ -192,7 +193,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 403);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(488, 123);
-            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // btn_new_search
@@ -200,7 +201,7 @@
             this.btn_new_search.Location = new System.Drawing.Point(183, 39);
             this.btn_new_search.Name = "btn_new_search";
             this.btn_new_search.Size = new System.Drawing.Size(123, 58);
-            this.btn_new_search.TabIndex = 2;
+            this.btn_new_search.TabIndex = 1;
             this.btn_new_search.Text = "New Search";
             this.btn_new_search.UseVisualStyleBackColor = true;
             this.btn_new_search.Click += new System.EventHandler(this.btn_new_search_Click);
@@ -210,7 +211,7 @@
             this.btn_update.Location = new System.Drawing.Point(349, 39);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(123, 58);
-            this.btn_update.TabIndex = 1;
+            this.btn_update.TabIndex = 2;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
@@ -261,7 +262,7 @@
             this.gp_search.Location = new System.Drawing.Point(12, 12);
             this.gp_search.Name = "gp_search";
             this.gp_search.Size = new System.Drawing.Size(488, 100);
-            this.gp_search.TabIndex = 13;
+            this.gp_search.TabIndex = 0;
             this.gp_search.TabStop = false;
             this.gp_search.Text = "Search";
             // 

@@ -48,7 +48,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 391);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(504, 107);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // btn_print
@@ -93,11 +93,12 @@
             // 
             // data_grid_user
             // 
+            this.data_grid_user.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.data_grid_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_grid_user.Location = new System.Drawing.Point(12, 3);
             this.data_grid_user.Name = "data_grid_user";
             this.data_grid_user.Size = new System.Drawing.Size(504, 382);
-            this.data_grid_user.TabIndex = 2;
+            this.data_grid_user.TabIndex = 0;
             // 
             // ListUser
             // 

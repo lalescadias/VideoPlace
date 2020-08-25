@@ -60,10 +60,10 @@ class DBConnect
             return false;
         }
     }
-    public bool insertUser(string name, string contact, string adress)
+    public bool insertUser(string name, string nif, string contact, string adress)
     {
-        string query = "insert into users (name, contact, adress) values(" +
-           "'" + name + "', '" + contact + "', '" + adress + "'); ";
+        string query = "insert into users (name,nif, contact, adress) values(" +
+           "'" + name + "', '" + nif + "', '" + contact + "', '" + adress + "'); ";
         bool flag = false;
         try
         {
@@ -85,9 +85,9 @@ class DBConnect
         }
         return flag;
     }
-    public bool SearchUser(string id, ref string name, ref string contact, ref string adress)
+    public bool SearchUser(string id, ref string name, ref string nif,ref string contact, ref string adress)
     {
-        string query = "Select name, contact, adress from users where userId= " + id;
+        string query = "Select * from users where userId= " + id;
         bool flag = false;
         try
         {
@@ -101,6 +101,7 @@ class DBConnect
                     name = dataReader["name"].ToString();
                     contact = dataReader["contact"].ToString();
                     adress = dataReader["adress"].ToString();
+                    nif = dataReader["nif"].ToString();
                     flag = true;
                 }
                 dataReader.Close();
@@ -115,6 +116,34 @@ class DBConnect
             this.CloseConnection();
         }
         return flag;
+    }
+    public int SearchUser(string nif)
+    {
+        string query = "Select * from users where nif= " + nif;
+        int count = 0;
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    count++;
+                }
+                dataReader.Close();
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return count;
     }
     public bool DeleteUser(string id)
     {
@@ -167,12 +196,12 @@ class DBConnect
     {
         string query = "select * from users order by name  ";
 
-        List<string>[] list = new List<string>[4];
+        List<string>[] list = new List<string>[5];
         list[0] = new List<string>();
         list[1] = new List<string>();
         list[2] = new List<string>();
         list[3] = new List<string>();
-
+        list[4] = new List<string>();
         if (this.OpenConnection())
         {
             MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -181,8 +210,9 @@ class DBConnect
             {
                 list[0].Add(dataReader["UserId"].ToString());
                 list[1].Add(dataReader["name"].ToString());
-                list[2].Add(dataReader["contact"].ToString());
-                list[3].Add(dataReader["adress"].ToString());
+                list[2].Add(dataReader["nif"].ToString());
+                list[3].Add(dataReader["contact"].ToString());
+                list[4].Add(dataReader["adress"].ToString());
             }
             dataReader.Close();
             this.CloseConnection();
@@ -604,6 +634,42 @@ class DBConnect
             this.CloseConnection();
         }
         return flag;
+    }
+    public int SearchBorrowing(string id, string option)
+    {
+        string query = "";
+        int count = 0;
+        if (option.Equals("movie"))
+        {
+            query = "select * from borrowing  where movie_id = " + id;
+        }
+        else
+        {
+            query = "select * from borrowing  where userId = " + id;
+        }
+        try
+        {
+            if (this.OpenConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    count++;
+                }
+                dataReader.Close();
+            }
+        }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            this.CloseConnection();
+        }
+        return count;
     }
     public MySqlTransaction BeginTransaction()
     {

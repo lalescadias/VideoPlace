@@ -221,7 +221,7 @@ namespace TrabalhoFinal
 
         private void closeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Want to exit the application)", Util.title, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show("Want to exit the application", Util.title, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 this.Close();
             }

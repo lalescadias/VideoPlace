@@ -44,6 +44,8 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.gp_search = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_nif = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.gp_data.SuspendLayout();
             this.gp_search.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,6 +53,8 @@
             // 
             // gp_data
             // 
+            this.gp_data.Controls.Add(this.txt_nif);
+            this.gp_data.Controls.Add(this.label5);
             this.gp_data.Controls.Add(this.txt_adress);
             this.gp_data.Controls.Add(this.label3);
             this.gp_data.Controls.Add(this.txt_contact);
@@ -66,7 +70,7 @@
             // 
             // txt_adress
             // 
-            this.txt_adress.Location = new System.Drawing.Point(81, 115);
+            this.txt_adress.Location = new System.Drawing.Point(81, 132);
             this.txt_adress.Name = "txt_adress";
             this.txt_adress.Size = new System.Drawing.Size(330, 20);
             this.txt_adress.TabIndex = 5;
@@ -74,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 118);
+            this.label3.Location = new System.Drawing.Point(25, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 4;
@@ -82,14 +86,14 @@
             // 
             // txt_contact
             // 
-            this.txt_contact.Location = new System.Drawing.Point(81, 77);
+            this.txt_contact.Location = new System.Drawing.Point(81, 95);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(234, 20);
             this.txt_contact.TabIndex = 3;
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(81, 41);
+            this.txt_name.Location = new System.Drawing.Point(81, 29);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(234, 20);
             this.txt_name.TabIndex = 1;
@@ -97,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 77);
+            this.label2.Location = new System.Drawing.Point(25, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
@@ -106,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 41);
+            this.label1.Location = new System.Drawing.Point(25, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
@@ -193,6 +197,23 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
+            // txt_nif
+            // 
+            this.txt_nif.Location = new System.Drawing.Point(81, 66);
+            this.txt_nif.Name = "txt_nif";
+            this.txt_nif.ReadOnly = true;
+            this.txt_nif.Size = new System.Drawing.Size(123, 20);
+            this.txt_nif.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Nif:";
+            // 
             // UpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +253,7 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.GroupBox gp_search;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txt_nif;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -47,13 +47,13 @@
             this.groupBox1.Controls.Add(this.gp_num_record);
             this.groupBox1.Location = new System.Drawing.Point(12, 396);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(504, 107);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.Size = new System.Drawing.Size(685, 107);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // btn_print
             // 
-            this.btn_print.Location = new System.Drawing.Point(255, 27);
+            this.btn_print.Location = new System.Drawing.Point(354, 27);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(90, 52);
             this.btn_print.TabIndex = 4;
@@ -63,7 +63,7 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(383, 27);
+            this.btn_close.Location = new System.Drawing.Point(493, 27);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(90, 52);
             this.btn_close.TabIndex = 3;
@@ -93,17 +93,18 @@
             // 
             // data_grid_user
             // 
+            this.data_grid_user.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.data_grid_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_grid_user.Location = new System.Drawing.Point(12, 8);
             this.data_grid_user.Name = "data_grid_user";
-            this.data_grid_user.Size = new System.Drawing.Size(504, 382);
-            this.data_grid_user.TabIndex = 4;
+            this.data_grid_user.Size = new System.Drawing.Size(685, 382);
+            this.data_grid_user.TabIndex = 0;
             // 
             // ListMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 513);
+            this.ClientSize = new System.Drawing.Size(709, 522);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.data_grid_user);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

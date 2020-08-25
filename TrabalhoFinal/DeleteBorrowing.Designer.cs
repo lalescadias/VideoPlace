@@ -70,7 +70,7 @@
             this.final_date.Location = new System.Drawing.Point(69, 330);
             this.final_date.Name = "final_date";
             this.final_date.Size = new System.Drawing.Size(200, 20);
-            this.final_date.TabIndex = 26;
+            this.final_date.TabIndex = 3;
             // 
             // initial_date
             // 
@@ -78,7 +78,7 @@
             this.initial_date.Location = new System.Drawing.Point(69, 289);
             this.initial_date.Name = "initial_date";
             this.initial_date.Size = new System.Drawing.Size(200, 20);
-            this.initial_date.TabIndex = 25;
+            this.initial_date.TabIndex = 1;
             // 
             // label3
             // 
@@ -86,7 +86,7 @@
             this.label3.Location = new System.Drawing.Point(8, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 23;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Initial date:";
             // 
             // txt_contact
@@ -215,7 +215,7 @@
             this.label4.Location = new System.Drawing.Point(8, 330);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 24;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Final date:";
             // 
             // gp_data
@@ -231,7 +231,7 @@
             this.gp_data.Location = new System.Drawing.Point(12, 123);
             this.gp_data.Name = "gp_data";
             this.gp_data.Size = new System.Drawing.Size(475, 372);
-            this.gp_data.TabIndex = 13;
+            this.gp_data.TabIndex = 1;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 
@@ -262,7 +262,7 @@
             this.gp_borrowing.Location = new System.Drawing.Point(11, 11);
             this.gp_borrowing.Name = "gp_borrowing";
             this.gp_borrowing.Size = new System.Drawing.Size(476, 106);
-            this.gp_borrowing.TabIndex = 11;
+            this.gp_borrowing.TabIndex = 0;
             this.gp_borrowing.TabStop = false;
             this.gp_borrowing.Text = "Borrowing";
             // 
@@ -271,7 +271,7 @@
             this.btn_clear.Location = new System.Drawing.Point(320, 46);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(57, 25);
-            this.btn_clear.TabIndex = 2;
+            this.btn_clear.TabIndex = 3;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
@@ -284,7 +284,7 @@
             this.btn_searchBorrowing.Location = new System.Drawing.Point(272, 46);
             this.btn_searchBorrowing.Name = "btn_searchBorrowing";
             this.btn_searchBorrowing.Size = new System.Drawing.Size(28, 25);
-            this.btn_searchBorrowing.TabIndex = 17;
+            this.btn_searchBorrowing.TabIndex = 2;
             this.btn_searchBorrowing.UseVisualStyleBackColor = true;
             this.btn_searchBorrowing.Click += new System.EventHandler(this.btn_searchBorrowing_Click);
             // 
@@ -293,7 +293,7 @@
             this.txt_seachBorrowing.Location = new System.Drawing.Point(87, 46);
             this.txt_seachBorrowing.Name = "txt_seachBorrowing";
             this.txt_seachBorrowing.Size = new System.Drawing.Size(176, 20);
-            this.txt_seachBorrowing.TabIndex = 14;
+            this.txt_seachBorrowing.TabIndex = 1;
             // 
             // label5
             // 
@@ -301,7 +301,7 @@
             this.label5.Location = new System.Drawing.Point(10, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 13;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Nº borrowing:";
             // 
             // btn_delete
@@ -331,7 +331,7 @@
             this.gb_btn.Location = new System.Drawing.Point(12, 501);
             this.gb_btn.Name = "gb_btn";
             this.gb_btn.Size = new System.Drawing.Size(476, 99);
-            this.gb_btn.TabIndex = 12;
+            this.gb_btn.TabIndex = 2;
             this.gb_btn.TabStop = false;
             // 
             // DeleteBorrowing

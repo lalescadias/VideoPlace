@@ -69,7 +69,7 @@
             this.txt_seachBorrowing.Location = new System.Drawing.Point(87, 46);
             this.txt_seachBorrowing.Name = "txt_seachBorrowing";
             this.txt_seachBorrowing.Size = new System.Drawing.Size(176, 20);
-            this.txt_seachBorrowing.TabIndex = 14;
+            this.txt_seachBorrowing.TabIndex = 1;
             // 
             // label5
             // 
@@ -77,7 +77,7 @@
             this.label5.Location = new System.Drawing.Point(10, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 13;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Nº borrowing:";
             // 
             // gb_btn
@@ -87,7 +87,7 @@
             this.gb_btn.Location = new System.Drawing.Point(12, 519);
             this.gb_btn.Name = "gb_btn";
             this.gb_btn.Size = new System.Drawing.Size(476, 99);
-            this.gb_btn.TabIndex = 9;
+            this.gb_btn.TabIndex = 2;
             this.gb_btn.TabStop = false;
             // 
             // btn_save
@@ -115,7 +115,7 @@
             this.btn_clearUser.Location = new System.Drawing.Point(320, 46);
             this.btn_clearUser.Name = "btn_clearUser";
             this.btn_clearUser.Size = new System.Drawing.Size(57, 25);
-            this.btn_clearUser.TabIndex = 2;
+            this.btn_clearUser.TabIndex = 3;
             this.btn_clearUser.Text = "Clear";
             this.btn_clearUser.UseVisualStyleBackColor = true;
             this.btn_clearUser.Click += new System.EventHandler(this.btn_clearUser_Click);
@@ -128,7 +128,7 @@
             this.btn_searchBorrowing.Location = new System.Drawing.Point(272, 46);
             this.btn_searchBorrowing.Name = "btn_searchBorrowing";
             this.btn_searchBorrowing.Size = new System.Drawing.Size(28, 25);
-            this.btn_searchBorrowing.TabIndex = 17;
+            this.btn_searchBorrowing.TabIndex = 2;
             this.btn_searchBorrowing.UseVisualStyleBackColor = true;
             this.btn_searchBorrowing.Click += new System.EventHandler(this.btn_searchBorrowing_Click_1);
             // 
@@ -142,7 +142,7 @@
             this.gp_borrowing.Location = new System.Drawing.Point(11, 29);
             this.gp_borrowing.Name = "gp_borrowing";
             this.gp_borrowing.Size = new System.Drawing.Size(476, 106);
-            this.gp_borrowing.TabIndex = 8;
+            this.gp_borrowing.TabIndex = 0;
             this.gp_borrowing.TabStop = false;
             this.gp_borrowing.Text = "Borrowing";
             // 
@@ -167,7 +167,7 @@
             this.gp_data.Location = new System.Drawing.Point(12, 141);
             this.gp_data.Name = "gp_data";
             this.gp_data.Size = new System.Drawing.Size(475, 372);
-            this.gp_data.TabIndex = 10;
+            this.gp_data.TabIndex = 1;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
             // 

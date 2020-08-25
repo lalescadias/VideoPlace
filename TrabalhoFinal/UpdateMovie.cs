@@ -20,6 +20,7 @@ namespace TrabalhoFinal
             gp_data.Enabled = false;
             btn_update.Enabled = false;
             btn_new_search.Visible = false;
+            cb_genre.SelectedIndex = 25;
         }
 
         private void btn_search_Click(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace TrabalhoFinal
                         if (options == genre)
                         {
                             cb_genre.SelectedIndex = i;
+                            break;
                         }
                     }
                 }

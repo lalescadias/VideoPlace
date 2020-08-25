@@ -15,13 +15,15 @@ namespace TrabalhoFinal
         DBConnect connectDataBase = new DBConnect();
         public deleteUser()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void DeleteUser_Load(object sender, EventArgs e)
         {
             BlockControls();
             txt_search.Focus();
+            btn_new_search.Visible = false;
+            btn_delete.Enabled = false;
         }
 
         private void BlockControls()
@@ -41,6 +43,7 @@ namespace TrabalhoFinal
             string name = "";
             string contact = "";
             string adress = "";
+            string nif = "";
             txt_search.Text = Util.removeSpaces(txt_search.Text);
             if (txt_search.Text.Length < 1)
             {
@@ -49,21 +52,22 @@ namespace TrabalhoFinal
             }
             else
             {
-                if (connectDataBase.SearchUser(txt_search.Text, ref name, ref contact, ref adress))
+                if (connectDataBase.SearchUser(txt_search.Text, ref name, ref nif, ref contact, ref adress))
                 {
                     txt_name.Text = name;
                     txt_contact.Text = contact;
                     txt_adress.Text = adress;
+                    txt_nif.Text = nif;
                     btn_delete.Enabled = true;
                     btn_new_search.Visible = true;
+                    btn_search.Enabled = false;
+                    txt_search.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("No record found.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txt_search.Focus();
-                    gp_data.Enabled = true;
-                    btn_delete.Enabled = false;
-                    gp_data.Enabled = false;
+                    btn_new_search_Click(sender, e);
 
                 }
             }
@@ -71,11 +75,14 @@ namespace TrabalhoFinal
 
         private void btn_new_search_Click(object sender, EventArgs e)
         {
-            btn_cancel.Enabled = false;
+            btn_cancel.Enabled = true;
             btn_new_search.Visible = false;
+            btn_delete.Enabled = false;
             txt_search.Text = "";
+            btn_search.Enabled = true;
+            txt_search.Enabled = true;
             txt_search.Focus();
-            Util.cleanfields(ref txt_name, ref txt_contact, ref txt_adress);
+            Util.cleanfields(ref txt_name, ref txt_nif,ref txt_contact, ref txt_adress);
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -85,7 +92,11 @@ namespace TrabalhoFinal
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if (connectDataBase.DeleteUser(txt_search.Text))
+            if (connectDataBase.SearchBorrowing(txt_search.Text, "user") >0)
+            {
+                MessageBox.Show("It is not possible to delete a user because he has rented movies.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (connectDataBase.DeleteUser(txt_search.Text))
             {
                 MessageBox.Show("Deleted record.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 btn_new_search_Click(sender, e);
