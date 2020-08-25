@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Data;
 using System.Drawing;
+using System.Threading;
 
 class DBConnect
 {
@@ -511,7 +512,7 @@ class DBConnect
     {
         string query = "select users.name, users.contact, movies.title, movies.genre, borrowing.borrowing_id, borrowing.initial_date, borrowing.final_date from borrowing" +
             " inner join movies on movies.movie_id = borrowing.movie_id " +
-            "inner join users on users.userId = borrowing.userId;";
+            "inner join users on users.userId = borrowing.userId order by name;";
 
         List<string>[] list = new List<string>[7];
         list[0] = new List<string>();
@@ -628,5 +629,25 @@ class DBConnect
                 cmd.ExecuteNonQuery();
                 
         
+    }
+    public int checkHowManyBorrowingTheUserHas(string UserId)
+    {
+        string query = "Select* from borrowing where userId = " + UserId;
+
+        int count = 0;
+
+        if (this.OpenConnection())
+        {
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+                count++;
+            }
+            dataReader.Close();
+            this.CloseConnection();
+
+        }
+        return count;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListBorrowing));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_print = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             this.btn_print.TabIndex = 4;
             this.btn_print.Text = "Print";
             this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // btn_close
             // 
@@ -104,6 +106,7 @@
             this.ClientSize = new System.Drawing.Size(534, 510);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.data_grid_borrowing);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ListBorrowing";

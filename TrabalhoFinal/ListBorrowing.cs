@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace TrabalhoFinal
 {
     public partial class ListBorrowing : Form
@@ -56,6 +57,11 @@ namespace TrabalhoFinal
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            Util.printDataGridView(data_grid_borrowing);
         }
     }
     }

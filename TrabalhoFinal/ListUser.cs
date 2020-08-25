@@ -51,5 +51,10 @@ namespace TrabalhoFinal
             }
             label1.Text = list[0].Count.ToString();
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            Util.printDataGridView(data_grid_user);          
+        }
     }
 }

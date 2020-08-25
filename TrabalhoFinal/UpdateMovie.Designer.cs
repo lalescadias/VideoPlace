@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateMovie));
             this.gp_data = new System.Windows.Forms.GroupBox();
+            this.cb_genre = new System.Windows.Forms.ComboBox();
             this.txt_desc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_releaseYear = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.gp_search = new System.Windows.Forms.GroupBox();
-            this.cb_genre = new System.Windows.Forms.ComboBox();
             this.gp_data.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gp_search.SuspendLayout();
@@ -71,6 +71,41 @@
             this.gp_data.TabIndex = 14;
             this.gp_data.TabStop = false;
             this.gp_data.Text = "Data";
+            // 
+            // cb_genre
+            // 
+            this.cb_genre.FormattingEnabled = true;
+            this.cb_genre.Items.AddRange(new object[] {
+            "Absurdist/surreal/whimsical",
+            "Action",
+            "Adventure",
+            "Animation",
+            "Comedy",
+            "Crime",
+            "Drama",
+            "Fantasy",
+            "Historical",
+            "Historical fiction",
+            "Horror",
+            "Magical realism",
+            "Mystery",
+            "Paranoid fiction",
+            "Philosophical",
+            "Political",
+            "Romance",
+            "Saga",
+            "Satire",
+            "Science fiction",
+            "Social",
+            "Speculative",
+            "Thriller",
+            "Urban",
+            "Western",
+            "Others"});
+            this.cb_genre.Location = new System.Drawing.Point(102, 77);
+            this.cb_genre.Name = "cb_genre";
+            this.cb_genre.Size = new System.Drawing.Size(121, 21);
+            this.cb_genre.TabIndex = 12;
             // 
             // txt_desc
             // 
@@ -230,41 +265,6 @@
             this.gp_search.TabStop = false;
             this.gp_search.Text = "Search";
             // 
-            // cb_genre
-            // 
-            this.cb_genre.FormattingEnabled = true;
-            this.cb_genre.Items.AddRange(new object[] {
-            "Absurdist/surreal/whimsical",
-            "Action",
-            "Adventure",
-            "Animation",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Fantasy",
-            "Historical",
-            "Historical fiction",
-            "Horror",
-            "Magical realism",
-            "Mystery",
-            "Paranoid fiction",
-            "Philosophical",
-            "Political",
-            "Romance",
-            "Saga",
-            "Satire",
-            "Science fiction",
-            "Social",
-            "Speculative",
-            "Thriller",
-            "Urban",
-            "Western",
-            "Others"});
-            this.cb_genre.Location = new System.Drawing.Point(102, 77);
-            this.cb_genre.Name = "cb_genre";
-            this.cb_genre.Size = new System.Drawing.Size(121, 21);
-            this.cb_genre.TabIndex = 12;
-            // 
             // UpdateMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +273,7 @@
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gp_search);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateMovie";
             this.Text = "UpdateMovie";
             this.gp_data.ResumeLayout(false);

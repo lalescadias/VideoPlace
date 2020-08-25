@@ -22,6 +22,7 @@ namespace TrabalhoFinal
             btn_save.Enabled = false;
             gp_dadosUser.Visible = false;
             gp_dataMovie.Visible = false;
+            txt_searchMovie.Enabled = false;
             btn_searchMovie.Enabled = false;
             initial_date.Enabled = false;
         }
@@ -41,6 +42,11 @@ namespace TrabalhoFinal
                 MessageBox.Show("Enter a user number.", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_seachUser.Focus();
             }
+            else if (connectDataBase.checkHowManyBorrowingTheUserHas(txt_seachUser.Text) > 3)
+            {
+                MessageBox.Show("The user has already made more than 3 loans!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_seachUser.Focus();
+            }
             else
             {
                 if (connectDataBase.SearchUser(txt_seachUser.Text, ref name, ref contact))
@@ -50,6 +56,7 @@ namespace TrabalhoFinal
                     gp_dadosUser.Visible = true;
                     gp_dadosUser.Enabled = false;
                     btn_searchMovie.Enabled = true;
+                    txt_searchMovie.Enabled = true;
                     btn_searchUser.Enabled = false;
                     txt_seachUser.Enabled = false;
                 }
@@ -134,12 +141,14 @@ namespace TrabalhoFinal
             txt_name.Text = "";
             txt_contact.Text = "";
             gp_dadosUser.Visible = false;
+            gp_dataMovie.Visible = false;
             txt_searchMovie.Text = "";
             btn_searchMovie.Enabled = false;
             txt_title.Text = "";
             txt_genre.Text = "";
             txt_release.Text = "";
             btn_save.Enabled = false;
+            final_date.Value = initial_date.Value;
         }
 
         private void btn_clearMovie_Click(object sender, EventArgs e)
@@ -148,10 +157,12 @@ namespace TrabalhoFinal
             if (txt_name.Text == "")
             {
                 btn_searchMovie.Enabled = false;
+                txt_searchMovie.Enabled = false;
             }
             else
             {
                 btn_searchMovie.Enabled = true;
+                txt_searchMovie.Enabled = true;
             }
             
             txt_searchMovie.Text = "";
@@ -160,7 +171,7 @@ namespace TrabalhoFinal
             txt_release.Text = "";
             btn_save.Enabled = false;
             gp_dataMovie.Visible = false;
-            txt_searchMovie.Enabled = true;
+            
         
         }
 
@@ -174,7 +185,7 @@ namespace TrabalhoFinal
             else if (txt_name.Text =="" || txt_title.Text == "")
             {
                 MessageBox.Show("Unable to insert, check the fields!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }         
             else { 
                 string initialDate = initial_date.Value.Year + "-" + initial_date.Value.Month + "-" + initial_date.Value.Day;
                 string finalDate = final_date.Value.Year + "-" + final_date.Value.Month + "-" + final_date.Value.Day;
@@ -189,8 +200,7 @@ namespace TrabalhoFinal
                         tran.Commit();
                         MessageBox.Show("Successfully inserted!!", Util.title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btn_clearUser_Click(sender, e);
-                        btn_clearMovie_Click(sender, e);
-                        final_date.Value = initial_date.Value;                   
+                        btn_clearMovie_Click(sender, e);                                        
                     }
                 }
                 catch(MySqlException ex)

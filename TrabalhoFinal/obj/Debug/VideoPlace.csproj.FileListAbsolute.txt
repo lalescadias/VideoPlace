@@ -23,3 +23,5 @@ C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.ListBorrowing.resources
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.DeleteBorrowing.resources
 C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\obj\Debug\TrabalhoFinal.ReturnBorrowing.resources
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\bin\Debug\itextsharp.dll
+C:\Users\lales\source\repos\TrabalhoFinal\TrabalhoFinal\bin\Debug\itextsharp.xml

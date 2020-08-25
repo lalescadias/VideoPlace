@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(insertUser));
             this.gp_data = new System.Windows.Forms.GroupBox();
             this.txt_adress = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -142,6 +143,7 @@
             this.ClientSize = new System.Drawing.Size(511, 353);
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gb_btn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "insertUser";

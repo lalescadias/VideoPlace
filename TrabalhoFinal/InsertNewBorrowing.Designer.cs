@@ -349,6 +349,7 @@
             this.ClientSize = new System.Drawing.Size(499, 528);
             this.Controls.Add(this.gp_data);
             this.Controls.Add(this.gb_btn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InsertNewBorrowing";
